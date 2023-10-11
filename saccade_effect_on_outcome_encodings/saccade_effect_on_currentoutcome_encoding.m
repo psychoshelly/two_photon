@@ -109,111 +109,147 @@ ylim([0 0.01]);
 
 
 
-p = kruskalwallis([mean(unbiased_current_left(:,5:8),2)],[mean(unbiased_current_right(:,5:8),2)],'off');
-
-
-mean_unbiased_current_left=mean(unbiased_current_left(5:8));
-std_unbiased_current_left=std(unbiased_current_left(5:8))/sqrt(length(unbiased_current_left(5:8)));
+p = kruskalwallis([mean(unbiased_current_left(:,5:20),2)],[mean(unbiased_current_right(:,5:20),2)],'off');
 
 
 
-
-mean_unbiased_current_right=mean(unbiased_current_right(5:8));
-std_unbiased_current_right=std(unbiased_current_right(5:8))/sqrt(length(unbiased_current_right(5:8)));
-
-
-
-figure
-bar(1,mean_unbiased_current_left)
-hold on
-bar(2,mean_unbiased_current_right)
-
-hold on
-errorbar(1,mean_unbiased_current_left,std_unbiased_current_left,'k');
-hold on
-errorbar(2,mean_unbiased_current_right,std_unbiased_current_right,'k');
+mean_unbiased_current_leftnew=mean(mean(unbiased_current_left(:,5:20),2));
+std_unbiased_current_leftnew=std(std(unbiased_current_left(:,5:20),0,2))/sqrt(length(unbiased_current_left));
 
 
 
 
-
-p = kruskalwallis([mean(unbiased_current_left(:,9:12),2)],[mean(unbiased_current_right(:,9:12),2)],'off');
-
-
-mean_unbiased_current_left=mean(unbiased_current_left(9:12));
-std_unbiased_current_left=std(unbiased_current_left(9:12))/sqrt(length(unbiased_current_left(9:12)));
-
-
-
-
-mean_unbiased_current_right=mean(unbiased_current_right(9:12));
-std_unbiased_current_right=std(unbiased_current_right(9:12))/sqrt(length(unbiased_current_right(9:12)));
+mean_unbiased_current_rightnew=mean(mean(unbiased_current_right(:,5:20),2));
+std_unbiased_current_rightnew=std(std(unbiased_current_right(:,5:20),0,2))/sqrt(length(unbiased_current_right));
 
 
 
 figure
-bar(1,mean_unbiased_current_left)
+bar(1,mean_unbiased_current_leftnew)
 hold on
-bar(2,mean_unbiased_current_right)
-
-hold on
-errorbar(1,mean_unbiased_current_left,std_unbiased_current_left,'k');
-hold on
-errorbar(2,mean_unbiased_current_right,std_unbiased_current_right,'k');
-
-
-p = kruskalwallis([mean(unbiased_current_left(:,13:16),2)],[mean(unbiased_current_right(:,13:16),2)],'off');
-
-
-mean_unbiased_current_left=mean(unbiased_current_left(13:16));
-std_unbiased_current_left=std(unbiased_current_left(13:16))/sqrt(length(unbiased_current_left(13:16)));
-
-
-
-
-mean_unbiased_current_right=mean(unbiased_current_right(13:16));
-std_unbiased_current_right=std(unbiased_current_right(13:16))/sqrt(length(unbiased_current_right(13:16)));
-
-
-
-figure
-bar(1,mean_unbiased_current_left)
-hold on
-bar(2,mean_unbiased_current_right)
+bar(2,mean_unbiased_current_rightnew)
 
 hold on
-errorbar(1,mean_unbiased_current_left,std_unbiased_current_left,'k');
+errorbar(1,mean_unbiased_current_leftnew,std_unbiased_current_leftnew,'k');
 hold on
-errorbar(2,mean_unbiased_current_right,std_unbiased_current_right,'k');
+errorbar(2,mean_unbiased_current_rightnew,std_unbiased_current_rightnew,'k');
 
 
 
 
-p = kruskalwallis([mean(unbiased_current_left(:,17:20),2)],[mean(unbiased_current_right(:,17:20),2)],'off');
-
-
-mean_unbiased_current_left=mean(unbiased_current_left(17:20));
-std_unbiased_current_left=std(unbiased_current_left(17:20))/sqrt(length(unbiased_current_left(17:20)));
 
 
 
 
-mean_unbiased_current_right=mean(unbiased_current_right(17:20));
-std_unbiased_current_right=std(unbiased_current_right(17:20))/sqrt(length(unbiased_current_right(17:20)));
 
 
 
-figure
-bar(1,mean_unbiased_current_left)
-hold on
-bar(2,mean_unbiased_current_right)
+% 
+% p = kruskalwallis([mean(unbiased_current_left(:,5:8),2)],[mean(unbiased_current_right(:,5:8),2)],'off');
+% 
+% 
+% mean_unbiased_current_leftnew=mean(unbiased_current_left(5:8));
+% std_unbiased_current_leftnew=std(unbiased_current_left(5:8))/sqrt(length(unbiased_current_left(5:8)));
+% 
+% 
+% 
+% 
+% mean_unbiased_current_rightnew=mean(unbiased_current_right(5:8));
+% std_unbiased_current_rightnew=std(unbiased_current_right(5:8))/sqrt(length(unbiased_current_right(5:8)));
 
-hold on
-errorbar(1,mean_unbiased_current_left,std_unbiased_current_left,'k');
-hold on
-errorbar(2,mean_unbiased_current_right,std_unbiased_current_right,'k');
 
 
+% figure
+% bar(1,mean_unbiased_current_leftnew)
+% hold on
+% bar(2,mean_unbiased_current_rightnew)
+% 
+% hold on
+% errorbar(1,mean_unbiased_current_leftnew,std_unbiased_current_leftnew,'k');
+% hold on
+% errorbar(2,mean_unbiased_current_rightnew,std_unbiased_current_rightnew,'k');
+% 
+
+
+
+
+% p = kruskalwallis([mean(unbiased_current_left(:,9:12),2)],[mean(unbiased_current_right(:,9:12),2)],'off');
+% 
+% 
+% mean_unbiased_current_leftnew=mean(unbiased_current_left(9:12));
+% std_unbiased_current_leftnew=std(unbiased_current_left(9:12))/sqrt(length(unbiased_current_left(9:12)));
+% 
+% 
+
+% 
+% mean_unbiased_current_rightnew=mean(unbiased_current_right(9:12));
+% std_unbiased_current_rightnew=std(unbiased_current_right(9:12))/sqrt(length(unbiased_current_right(9:12)));
+% 
+% 
+% 
+% figure
+% bar(1,mean_unbiased_current_leftnew)
+% hold on
+% bar(2,mean_unbiased_current_rightnew)
+% 
+% hold on
+% errorbar(1,mean_unbiased_current_leftnew,std_unbiased_current_leftnew,'k');
+% hold on
+% errorbar(2,mean_unbiased_current_rightnew,std_unbiased_current_rightnew,'k');
+% 
+% 
+% p = kruskalwallis([mean(unbiased_current_left(:,13:16),2)],[mean(unbiased_current_right(:,13:16),2)],'off');
+% 
+% 
+% mean_unbiased_current_leftnew=mean(unbiased_current_left(13:16));
+% std_unbiased_current_leftnew=std(unbiased_current_left(13:16))/sqrt(length(unbiased_current_left(13:16)));
+% 
+
+
+% 
+% mean_unbiased_current_rightnew=mean(unbiased_current_right(13:16));
+% std_unbiased_current_rightnew=std(unbiased_current_right(13:16))/sqrt(length(unbiased_current_right(13:16)));
+% 
+% 
+% 
+% figure
+% bar(1,mean_unbiased_current_leftnew)
+% hold on
+% bar(2,mean_unbiased_current_rightnew)
+% 
+% hold on
+% errorbar(1,mean_unbiased_current_leftnew,std_unbiased_current_leftnew,'k');
+% hold on
+% errorbar(2,mean_unbiased_current_rightnew,std_unbiased_current_rightnew,'k');
+% 
+% 
+% 
+% 
+% p = kruskalwallis([mean(unbiased_current_left(:,17:20),2)],[mean(unbiased_current_right(:,17:20),2)],'off');
+% 
+% 
+% mean_unbiased_current_leftnew=mean(unbiased_current_left(17:20));
+% std_unbiased_current_leftnew=std(unbiased_current_left(17:20))/sqrt(length(unbiased_current_left(17:20)));
+
+
+
+
+% mean_unbiased_current_rightnew=mean(unbiased_current_right(17:20));
+% std_unbiased_current_rightnew=std(unbiased_current_right(17:20))/sqrt(length(unbiased_current_right(17:20)));
+% 
+% 
+% 
+% figure
+% bar(1,mean_unbiased_current_leftnew)
+% hold on
+% bar(2,mean_unbiased_current_rightnew)
+% 
+% hold on
+% errorbar(1,mean_unbiased_current_leftnew,std_unbiased_current_leftnew,'k');
+% hold on
+% errorbar(2,mean_unbiased_current_rightnew,std_unbiased_current_rightnew,'k');
+% 
+% 
 
 
 
@@ -920,45 +956,18 @@ legend('left','right');
 ylim([0 0.02]);
 
 
-
-p = kruskalwallis([mean(unbiased_current_leftnew(:,5:8),2)],[mean(unbiased_current_rightnew(:,5:8),2)],'off');
-
-
-mean_unbiased_current_leftnew=mean(unbiased_current_leftnew(5:8));
-std_unbiased_current_leftnew=std(unbiased_current_leftnew(5:8))/sqrt(length(unbiased_current_leftnew(5:8)));
+p = kruskalwallis([mean(unbiased_current_leftnew(:,5:20),2)],[mean(unbiased_current_rightnew(:,5:20),2)],'off');
 
 
 
-
-mean_unbiased_current_rightnew=mean(unbiased_current_rightnew(5:8));
-std_unbiased_current_rightnew=std(unbiased_current_rightnew(5:8))/sqrt(length(unbiased_current_rightnew(5:8)));
-
-
-
-figure
-bar(1,mean_unbiased_current_leftnew)
-hold on
-bar(2,mean_unbiased_current_rightnew)
-
-hold on
-errorbar(1,mean_unbiased_current_leftnew,std_unbiased_current_leftnew,'k');
-hold on
-errorbar(2,mean_unbiased_current_rightnew,std_unbiased_current_rightnew,'k');
+mean_unbiased_current_leftnew=mean(mean(unbiased_current_leftnew(:,5:20),2));
+std_unbiased_current_leftnew=std(std(unbiased_current_leftnew(:,5:20),0,2))/sqrt(length(unbiased_current_leftnew));
 
 
 
 
-p = kruskalwallis([mean(unbiased_current_leftnew(:,9:12),2)],[mean(unbiased_current_rightnew(:,9:12),2)],'off');
-
-
-mean_unbiased_current_leftnew=mean(unbiased_current_leftnew(9:12));
-std_unbiased_current_leftnew=std(unbiased_current_leftnew(9:12))/sqrt(length(unbiased_current_leftnew(9:12)));
-
-
-
-
-mean_unbiased_current_rightnew=mean(unbiased_current_rightnew(9:12));
-std_unbiased_current_rightnew=std(unbiased_current_rightnew(9:12))/sqrt(length(unbiased_current_rightnew(9:12)));
+mean_unbiased_current_rightnew=mean(mean(unbiased_current_rightnew(:,5:20),2));
+std_unbiased_current_rightnew=std(std(unbiased_current_rightnew(:,5:20),0,2))/sqrt(length(unbiased_current_rightnew));
 
 
 
@@ -976,30 +985,90 @@ errorbar(2,mean_unbiased_current_rightnew,std_unbiased_current_rightnew,'k');
 
 
 
-p = kruskalwallis([mean(unbiased_current_leftnew(:,13:16),2)],[mean(unbiased_current_rightnew(:,13:16),2)],'off');
-
-
-mean_unbiased_current_leftnew=mean(unbiased_current_leftnew(13:16));
-std_unbiased_current_leftnew=std(unbiased_current_leftnew(13:16))/sqrt(length(unbiased_current_leftnew(13:16)));
 
 
 
 
-mean_unbiased_current_rightnew=mean(unbiased_current_rightnew(13:16));
-std_unbiased_current_rightnew=std(unbiased_current_rightnew(13:16))/sqrt(length(unbiased_current_rightnew(13:16)));
+% 
+% p = kruskalwallis([mean(unbiased_current_leftnew(:,5:8),2)],[mean(unbiased_current_rightnew(:,5:8),2)],'off');
+% 
+% 
+% mean_unbiased_current_leftnew=mean(unbiased_current_leftnew(5:8));
+% std_unbiased_current_leftnew=std(unbiased_current_leftnew(5:8))/sqrt(length(unbiased_current_leftnew(5:8)));
+% 
+% 
+% 
+% 
+% mean_unbiased_current_rightnew=mean(unbiased_current_rightnew(5:8));
+% std_unbiased_current_rightnew=std(unbiased_current_rightnew(5:8))/sqrt(length(unbiased_current_rightnew(5:8)));
+% 
+
+% 
+% figure
+% bar(1,mean_unbiased_current_leftnew)
+% hold on
+% bar(2,mean_unbiased_current_rightnew)
+% 
+% hold on
+% errorbar(1,mean_unbiased_current_leftnew,std_unbiased_current_leftnew,'k');
+% hold on
+% errorbar(2,mean_unbiased_current_rightnew,std_unbiased_current_rightnew,'k');
+% 
 
 
 
-figure
-bar(1,mean_unbiased_current_leftnew)
-hold on
-bar(2,mean_unbiased_current_rightnew)
+% p = kruskalwallis([mean(unbiased_current_leftnew(:,9:12),2)],[mean(unbiased_current_rightnew(:,9:12),2)],'off');
+% 
+% 
+% mean_unbiased_current_leftnew=mean(unbiased_current_leftnew(9:12));
+% std_unbiased_current_leftnew=std(unbiased_current_leftnew(9:12))/sqrt(length(unbiased_current_leftnew(9:12)));
+% 
+% 
+% 
+% 
+% mean_unbiased_current_rightnew=mean(unbiased_current_rightnew(9:12));
+% std_unbiased_current_rightnew=std(unbiased_current_rightnew(9:12))/sqrt(length(unbiased_current_rightnew(9:12)));
+% 
+% 
+% 
+% figure
+% bar(1,mean_unbiased_current_leftnew)
+% hold on
+% bar(2,mean_unbiased_current_rightnew)
+% 
+% hold on
+% errorbar(1,mean_unbiased_current_leftnew,std_unbiased_current_leftnew,'k');
+% hold on
+% errorbar(2,mean_unbiased_current_rightnew,std_unbiased_current_rightnew,'k');
+% 
+% 
 
-hold on
-errorbar(1,mean_unbiased_current_leftnew,std_unbiased_current_leftnew,'k');
-hold on
-errorbar(2,mean_unbiased_current_rightnew,std_unbiased_current_rightnew,'k');
 
+
+% p = kruskalwallis([mean(unbiased_current_leftnew(:,13:16),2)],[mean(unbiased_current_rightnew(:,13:16),2)],'off');
+% 
+% 
+% mean_unbiased_current_leftnew=mean(unbiased_current_leftnew(13:16));
+% std_unbiased_current_leftnew=std(unbiased_current_leftnew(13:16))/sqrt(length(unbiased_current_leftnew(13:16)));
+% 
+% 
+% 
+% 
+% mean_unbiased_current_rightnew=mean(unbiased_current_rightnew(13:16));
+% std_unbiased_current_rightnew=std(unbiased_current_rightnew(13:16))/sqrt(length(unbiased_current_rightnew(13:16)));
+% 
+
+
+% figure
+% bar(1,mean_unbiased_current_leftnew)
+% hold on
+% bar(2,mean_unbiased_current_rightnew)
+% 
+% hold on
+% errorbar(1,mean_unbiased_current_leftnew,std_unbiased_current_leftnew,'k');
+% hold on
+% errorbar(2,mean_unbiased_current_rightnew,std_unbiased_current_rightnew,'k');
+% 
 
 
 
