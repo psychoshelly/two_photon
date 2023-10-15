@@ -75,7 +75,6 @@ bh=mlread('HH_7a_socialcue_20211108.bhv2');
  right_wrong=[a2_right_wrong a4_right_wrong];
 
  
- 
 %% currentcorrect_saccade_left
 
 for cell_num = 1:length(cell_id)

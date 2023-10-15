@@ -64,13 +64,13 @@ bh=mlread('L:\Monkey1\region1\20211108\HH_7a_socialcue_20211108.bhv2');
  
  
  %% balance correct and wrong
-  indx_rand_leftwrong=randi(length(left_wrong),1,length(left_correct)-length(left_wrong));
- rand_leftwrong=left_wrong(indx_rand_leftwrong);
- new_leftwrong=[left_wrong rand_leftwrong];
- 
-  indx_rand_rightwrong=randi(length(right_wrong),1,length(right_correct)-length(right_wrong));
- rand_rightwrong=right_wrong(indx_rand_rightwrong);
- new_rightwrong=[right_wrong rand_rightwrong];
+%   indx_rand_leftwrong=randi(length(left_wrong),1,length(left_correct)-length(left_wrong));
+%  rand_leftwrong=left_wrong(indx_rand_leftwrong);
+%  new_leftwrong=[left_wrong rand_leftwrong];
+%  
+%   indx_rand_rightwrong=randi(length(right_wrong),1,length(right_correct)-length(right_wrong));
+%  rand_rightwrong=right_wrong(indx_rand_rightwrong);
+%  new_rightwrong=[right_wrong rand_rightwrong];
  
 %% currentcorrect_saccade_left
 
@@ -85,8 +85,8 @@ for cell_num = 1:length(cell_id)
 end
 %% currentwrong_saccade_left
 for cell_num = 1:length(cell_id)
-    left_currentwrong.(sprintf('cell_%d',cell_num))=get_act_raw_trace(cell_num,new_leftwrong,F_cell_s, prev_t, after_t);
-    current_wrong_left(cell_num,:,:)=get_act_raw_trace(cell_num,new_leftwrong,F_cell_s, prev_t, after_t);
+    left_currentwrong.(sprintf('cell_%d',cell_num))=get_act_raw_trace(cell_num,left_wrong,F_cell_s, prev_t, after_t);
+    current_wrong_left(cell_num,:,:)=get_act_raw_trace(cell_num,left_wrong,F_cell_s, prev_t, after_t);
     for m=1:size(current_wrong_left,3)-1
         currenttrial_wrongleft(cell_num,:,m)=mean(current_wrong_left(cell_num,:,m:m+1),3);
     end
@@ -120,8 +120,8 @@ end
 %% currentwrong_saccade_right
 
 for cell_num = 1:length(cell_id)
-    right_currentwrong.(sprintf('cell_%d',cell_num))=get_act_raw_trace(cell_num,new_rightwrong,F_cell_s, prev_t, after_t);
-    current_wrong_right(cell_num,:,:)=get_act_raw_trace(cell_num,new_rightwrong,F_cell_s, prev_t, after_t);
+    right_currentwrong.(sprintf('cell_%d',cell_num))=get_act_raw_trace(cell_num,right_wrong,F_cell_s, prev_t, after_t);
+    current_wrong_right(cell_num,:,:)=get_act_raw_trace(cell_num,right_wrong,F_cell_s, prev_t, after_t);
     for m=1:size(current_wrong_right,3)-1
         currenttrial_wrongright(cell_num,:,m)=mean(current_wrong_right(cell_num,:,m:m+1),3);
     end
@@ -146,12 +146,12 @@ for i=1:length(unbiased_current_left)
     end
 end
                             
-shadedErrorBar(([1:19]-3)/7.4,mean(unbiased_currentoutcome_region1_1108(:,2:20),1),std(unbiased_currentoutcome_region1_1108(:,2:20),1)./sqrt(length(unbiased_currentoutcome_region1_1108(:,2:20))),'lineProps','r');
-xline(0);
-ylim([0 0.06]);
-
-
-save('L:\Monkey1\region1\20211108\unbiased_currentoutcome_region1_1108_raw.mat','unbiased_currentoutcome_region1_1108');
+% shadedErrorBar(([1:19]-3)/7.4,mean(unbiased_currentoutcome_region1_1108(:,2:20),1),std(unbiased_currentoutcome_region1_1108(:,2:20),1)./sqrt(length(unbiased_currentoutcome_region1_1108(:,2:20))),'lineProps','r');
+% xline(0);
+% ylim([0 0.06]);
+% 
+% 
+% save('L:\Monkey1\region1\20211108\unbiased_currentoutcome_region1_1108_raw.mat','unbiased_currentoutcome_region1_1108');
 
 
 % load('F:\0608-0615_same_neurons\0608\proportions_of_cells_encoding_current_trials_outcome_20220608.mat');
