@@ -31,3 +31,28 @@ for i=1:size(unbiased_currentoutcome0s,2)
     p=kruskalwallis([unbiased_currentoutcome0s(:,i),unbiased_currentoutcome5s(:,i)]);
     out(1,i)=p;
 end
+
+
+
+p = kruskalwallis([mean(unbiased_currentoutcome0s(:,5:20),2)],[mean(unbiased_currentoutcome0s(:,5:20),2)],'off');
+
+
+mean_unbiased_currentoutcome0s=mean(unbiased_unbiased_currentoutcome0s(5:20));
+std_unbiased_currentoutcome0s=std(unbiased_currentoutcome0s(5:20))/sqrt(length(unbiased_currentoutcome0s(5:20)));
+
+mean_unbiased_currentoutcome5s=mean(unbiased_unbiased_currentoutcome5s(5:20));
+std_unbiased_currentoutcome5s=std(unbiased_currentoutcome5s(5:20))/sqrt(length(unbiased_currentoutcome5s(5:20)));
+
+
+
+
+
+figure
+bar(1,mean_unbiased_currentoutcome0s)
+hold on
+bar(2,mean_unbiased_currentoutcome5s)
+
+hold on
+errorbar(1,mean_unbiased_currentoutcome0s,std_unbiased_currentoutcome0s,'k');
+hold on
+errorbar(2,mean_unbiased_currentoutcome5s,std_mean_unbiased_currentoutcome5s,'k');
